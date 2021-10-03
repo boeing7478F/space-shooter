@@ -65,16 +65,10 @@ basic.forever(function () {
     for (let index = 0; index <= 4; index++) {
         if (killed[index] == 0) {
             if (enemyY[index] > 4) {
-                basic.showLeds(`
-                    # . . . #
-                    . # . # .
-                    . . # . .
-                    . # . # .
-                    # . . . #
-                    `)
+                game.gameOver()
                 basic.pause(200)
                 basic.clearScreen()
-                basic.showString("score:")
+                basic.showString("SCORE : ")
                 basic.showNumber(acc)
             }
         }
